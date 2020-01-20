@@ -207,8 +207,8 @@ class _DigitalClockState extends State<DigitalClock> {
                           begin: Alignment.bottomCenter,
                           end: Alignment.topCenter,
                           colors: [
-                            Color.,
                             Colors.blue,
+                            Colors.deepOrangeAccent,
                           ],
                           stops: [0.0, 1.0],
                         ),
