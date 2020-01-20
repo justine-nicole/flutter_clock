@@ -160,11 +160,14 @@ class _DigitalClockState extends State<DigitalClock> {
           child: Row(
             children: <Widget>[
               Expanded(
-                  child: Text(
+                  child: Container(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Text(
                 '$hour:$minute',
                 style: defaultStyle,
-                    textAlign: TextAlign.center,
+                      textAlign: TextAlign.center,
               ),
+                  ),
               ),
             Container(
               alignment: Alignment.centerLeft,
