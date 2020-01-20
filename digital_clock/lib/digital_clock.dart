@@ -203,7 +203,7 @@ class _DigitalClockState extends State<DigitalClock> {
                     ),
                   ),
                   const Spacer(
-                    flex: 30,
+                    flex: 40,
                   ),
 
                 ],
