@@ -120,7 +120,7 @@ class _DigitalClockState extends State<DigitalClock> {
     // set clock container height and font size
     final containerHeight = MediaQuery.of(context).size.shortestSide / 2;
     final containerWidth = MediaQuery.of(context).size.shortestSide / 10;
-    final fontSize = MediaQuery.of(context).size.shortestSide /3.5;
+    final fontSize = MediaQuery.of(context).size.shortestSide / 3.5;
     // set weather container height
     final weatherHeight = MediaQuery.of(context).size.shortestSide;
     final weatherWidth = MediaQuery.of(context).size.shortestSide / 1.6;
@@ -130,7 +130,6 @@ class _DigitalClockState extends State<DigitalClock> {
 //        : const EdgeInsets.fromLTRB(10, 0, 0, 0);
     // weather icon logic
     // temperature bar logic
-
 
     // Font Style Definition
     final defaultStyle = TextStyle(
@@ -160,71 +159,68 @@ class _DigitalClockState extends State<DigitalClock> {
           child: Row(
             children: <Widget>[
               Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: Text(
-                '$hour:$minute',
-                style: defaultStyle,
-                      textAlign: TextAlign.center,
-              ),
+                child: Container(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Text(
+                    '$hour:$minute',
+                    style: defaultStyle,
+                    textAlign: TextAlign.center,
                   ),
+                ),
               ),
-            Container(
-              alignment: Alignment.centerLeft,
-              height: weatherHeight,
-              width: weatherWidth,
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    color: colors[_Element.margin],
-                    height: weatherHeight,
-                    width: 12.0,
-                  ),
-                  // placeholder for weather condition icon
-                  Expanded(
-                    flex: 100,
-                    child: Container(
-                      alignment: Alignment.centerRight,
-                      child: Icon(Icons.ac_unit,
-                        color: Colors.white60,
-                        size: 90.0,
-                      ),
+              Container(
+                alignment: Alignment.centerLeft,
+                height: weatherHeight,
+                width: weatherWidth,
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      color: colors[_Element.margin],
+                      height: weatherHeight,
+                      width: 12.0,
                     ),
-                  ),
-                  const Spacer(
-                    flex: 30,
-                  ),
-                  // placeholder for temperature gauge
-                  Expanded(
-                    flex: 40,
-                    child: Container(
-                      height: weatherHeight-80,
-                      width: 20.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
-                          colors: [
-                            Colors.blue,
-                            Colors.deepOrangeAccent,
-                          ],
-                          stops: [0.0, 1.0],
+                    // placeholder for weather condition icon
+                    Expanded(
+                      flex: 100,
+                      child: Container(
+                        alignment: Alignment.centerRight,
+                        child: Icon(
+                          Icons.ac_unit,
+                          color: Colors.white60,
+                          size: 90.0,
                         ),
-
                       ),
-
                     ),
-                  ),
-                  const Spacer(
-                    flex: 40,
-                  ),
-
-                ],
+                    const Spacer(
+                      flex: 30,
+                    ),
+                    // placeholder for temperature gauge
+                    Expanded(
+                      flex: 40,
+                      child: Container(
+                        height: weatherHeight - 80,
+                        width: 20.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Colors.blue,
+                              Colors.deepOrangeAccent,
+                            ],
+                            stops: [0.0, 1.0],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Spacer(
+                      flex: 40,
+                    ),
+                  ],
+                ),
               ),
-            ),
-
             ],
           ),
         ),
