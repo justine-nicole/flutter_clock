@@ -180,17 +180,31 @@ class _DigitalClockState extends State<DigitalClock> {
                     width: 12.0,
                   ),
                   // placeholder for weather condition icon
-                  Container(
-                    alignment: Alignment.centerRight,
-//                        color: colors[_Element.background],
-                    height: 100.0,
-                    width: 100.0,
-                    child: Icon(Icons.ac_unit,
-                      color: Colors.white60,
-                      size: 80.0,
+                  Expanded(
+                    flex: 100,
+                    child: Container(
+                      alignment: Alignment.centerRight,
+                      child: Icon(Icons.ac_unit,
+                        color: Colors.white60,
+                        size: 90.0,
+                      ),
                     ),
                   ),
-
+                  const Spacer(
+                    flex: 30,
+                  ),
+                  // placeholder for temperature gauge
+                  Expanded(
+                    flex: 40,
+                    child: Container(
+                      height: weatherHeight-80,
+                      width: 20.0,
+                      color: Colors.amberAccent,
+                    ),
+                  ),
+                  const Spacer(
+                    flex: 30,
+                  ),
 
                 ],
               ),
