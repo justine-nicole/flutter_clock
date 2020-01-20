@@ -120,7 +120,7 @@ class _DigitalClockState extends State<DigitalClock> {
     // set clock container height and font size
     final containerHeight = MediaQuery.of(context).size.shortestSide / 2;
     final containerWidth = MediaQuery.of(context).size.shortestSide / 10;
-    final fontSize = MediaQuery.of(context).size.shortestSide /5;
+    final fontSize = MediaQuery.of(context).size.shortestSide /3.5;
     // set weather container height
     final weatherHeight = MediaQuery.of(context).size.shortestSide;
     final weatherWidth = MediaQuery.of(context).size.shortestSide / 1.6;
@@ -170,7 +170,7 @@ class _DigitalClockState extends State<DigitalClock> {
                   )),
                 Container(
                   alignment: Alignment.centerLeft,
-                  color: colors[_Element.background],
+//                  color: colors[_Element.background],
                   height: weatherHeight,
                   width: weatherWidth,
                   child: Row(
@@ -184,7 +184,7 @@ class _DigitalClockState extends State<DigitalClock> {
                       // placeholder for weather condition icon
                       Container(
                         alignment: Alignment.centerRight,
-                        color: colors[_Element.background],
+//                        color: colors[_Element.background],
                         height: 100.0,
                         width: 100.0,
                         child: Icon(Icons.ac_unit,
