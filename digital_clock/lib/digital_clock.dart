@@ -171,7 +171,6 @@ class _DigitalClockState extends State<DigitalClock> {
               ),
             Container(
               alignment: Alignment.centerLeft,
-//                  color: colors[_Element.background],
               height: weatherHeight,
               width: weatherWidth,
               child: Row(
@@ -202,7 +201,20 @@ class _DigitalClockState extends State<DigitalClock> {
                     child: Container(
                       height: weatherHeight-80,
                       width: 20.0,
-                      color: Colors.amberAccent,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            Color.,
+                            Colors.blue,
+                          ],
+                          stops: [0.0, 1.0],
+                        ),
+
+                      ),
+
                     ),
                   ),
                   const Spacer(
