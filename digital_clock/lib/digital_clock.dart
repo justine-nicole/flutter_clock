@@ -125,9 +125,9 @@ class _DigitalClockState extends State<DigitalClock> {
     final weatherHeight = MediaQuery.of(context).size.shortestSide;
     final weatherWidth = MediaQuery.of(context).size.shortestSide / 1.6;
     // align time display
-    final timePadding = widget.model.is24HourFormat
-        ? const EdgeInsets.fromLTRB(15, 0, 0, 0)
-        : const EdgeInsets.fromLTRB(10, 0, 0, 0);
+//    final timePadding = widget.model.is24HourFormat
+//        ? const EdgeInsets.fromLTRB(15, 0, 0, 0)
+//        : const EdgeInsets.fromLTRB(10, 0, 0, 0);
     // weather icon logic
     // temperature bar logic
 
@@ -157,50 +157,46 @@ class _DigitalClockState extends State<DigitalClock> {
           height: containerHeight,
           width: containerWidth,
           margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-          child: Center(
-            child: Padding(
-              //add conditional stmt, time format
-              padding: timePadding,
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                  child: Text(
+                '$hour:$minute',
+                style: defaultStyle,
+                    textAlign: TextAlign.center,
+              ),
+              ),
+            Container(
+              alignment: Alignment.centerLeft,
+//                  color: colors[_Element.background],
+              height: weatherHeight,
+              width: weatherWidth,
               child: Row(
                 children: <Widget>[
-                  Expanded(
-                      child: Text(
-                    '$hour:$minute',
-                    style: defaultStyle,
-                  )),
-                Container(
-                  alignment: Alignment.centerLeft,
-//                  color: colors[_Element.background],
-                  height: weatherHeight,
-                  width: weatherWidth,
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        color: colors[_Element.margin],
-                        height: weatherHeight,
-                        width: 12.0,
-                      ),
-                      // placeholder for weather condition icon
-                      Container(
-                        alignment: Alignment.centerRight,
-//                        color: colors[_Element.background],
-                        height: 100.0,
-                        width: 100.0,
-                        child: Icon(Icons.ac_unit,
-                          color: Colors.white60,
-                          size: 80.0,
-                        ),
-                      ),
-
-
-                    ],
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    color: colors[_Element.margin],
+                    height: weatherHeight,
+                    width: 12.0,
                   ),
-                ),
+                  // placeholder for weather condition icon
+                  Container(
+                    alignment: Alignment.centerRight,
+//                        color: colors[_Element.background],
+                    height: 100.0,
+                    width: 100.0,
+                    child: Icon(Icons.ac_unit,
+                      color: Colors.white60,
+                      size: 80.0,
+                    ),
+                  ),
+
 
                 ],
               ),
             ),
+
+            ],
           ),
         ),
       ),
